@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#145c52">
+<meta name="description" content="روان‌نگار؛ پیش‌نویس شرح حال روان‌پزشکی">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="style.css">
+<title>روان‌نگار</title>
+</head>
+<body>
+<header>
+  <div class="brand">روان‌نگار <span>پیش‌نویس شرح حال روان‌پزشکی</span></div>
+  <span id="offline" class="pill">در حال بررسی اتصال…</span>
+</header>
+<main>
+  <section class="intro">
+    <h1>شرح حال را ثبت و تنظیم کن</h1>
+    <p>صوت یا متن مصاحبه را وارد کن، سپس بخش‌های شرح حال را تکمیل و خروجی بگیر.</p>
+    <p class="notice">نسخهٔ اولیه: رابط کاربری آفلاین است؛ تبدیل صوت و استخراج هوشمند اطلاعات هنوز به موتور پردازش متصل نشده است. از اطلاعات هویتی واقعی بیمار در این نمونه استفاده نکن.</p>
+  </section>
+
+  <section class="panel">
+    <h2>۱. صوت و متن مصاحبه</h2>
+    <div class="actions">
+      <button id="recordBtn" class="primary">● شروع ضبط</button>
+      <button id="stopBtn" disabled>پایان ضبط</button>
+      <label class="filebtn">انتخاب فایل صوتی<input id="audioFile" type="file" accept="audio/*"></label>
+    </div>
+    <audio id="playback" controls hidden></audio>
+    <p id="recordStatus" class="hint">ضبط فقط تا زمانی کار می‌کند که مرورگر اجازهٔ میکروفون بدهد.</p>
+    <label for="transcript">متن مصاحبه / متن پیاده‌سازی‌شده</label>
+    <textarea id="transcript" rows="6" placeholder="متن مصاحبه را اینجا وارد کن. فارسی و ترکی آذربایجانی را می‌توانی وارد کنی؛ ترجمهٔ خودکار در این نسخه فعال نیست."></textarea>
+    <div class="actions">
+      <button id="saveTranscript">ذخیرهٔ متن در همین دستگاه</button>
+      <button id="clearTranscript" class="secondary">پاک‌کردن متن</button>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="section-heading"><h2>۲. فرم ۱۵‌بخشی شرح حال</h2><span id="count" class="pill">۰ از ۱۵ تکمیل</span></div>
+    <p class="hint">اطلاعات را دستی وارد کن. موارد نامعلوم را «نامشخص» بنویس؛ اطلاعاتی را حدس نزن.</p>
+    <div id="fields"></div>
+  </section>
+
+  <section class="panel">
+    <h2>۳. خروجی</h2>
+    <p class="hint">خروجی شامل متن واردشده و تمام بخش‌های فرم است. پیش‌نویس تشخیص و پلن باید توسط پزشک بررسی شود.</p>
+    <div class="actions">
+      <button id="exportTxt" class="primary">خروجی متنی (TXT)</button>
+      <button id="exportJson">خروجی ساختاریافته (JSON)</button>
+      <button id="clearAll" class="danger">پاک‌کردن همهٔ اطلاعات</button>
+    </div>
+    <p id="status" class="hint" aria-live="polite"></p>
+  </section>
+  <footer>روان‌نگار • نمونهٔ اولیهٔ PWA • اطلاعات این نسخه در حافظهٔ مرورگر ذخیره می‌شود.</footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

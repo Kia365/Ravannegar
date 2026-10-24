@@ -1,0 +1,13 @@
+{
+  "name": "روان‌نگار",
+  "short_name": "روان‌نگار",
+  "description": "ثبت و تنظیم پیش‌نویس شرح حال روان‌پزشکی",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f7f6",
+  "theme_color": "#145c52",
+  "icons": []
+}
